@@ -9,7 +9,25 @@ import SwiftUI
 
 struct FirstCircleView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            VStack {
+                Text("Roses are red,")
+                Image(systemName: "rosette")
+                Text("Violets are blue,")
+            }
+            .padding()
+            .background(.purple)
+            .cornerRadius(10)
+            
+            VStack {
+                Text("I just love")
+                Image(systemName: "laptopcomputer")
+                Text("Coding with you")
+            }
+            .padding()
+            .background(.purple)
+            .cornerRadius(10)
+        }
     }
 }
 
