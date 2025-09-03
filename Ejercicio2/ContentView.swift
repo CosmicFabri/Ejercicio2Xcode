@@ -9,18 +9,21 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Circle()
-                .foregroundColor(.pink)
-            HStack {
-                Circle()
-                    .foregroundColor(.red)
-                Circle()
-                    .foregroundColor(.orange)
+        NavigationStack {
+            VStack {
+                NavigationLink(destination: FirstCircleView()) {
+                    Circle()
+                        .foregroundColor(.pink)
+                }
+                HStack {
+                    Circle()
+                        .foregroundColor(.red)
+                    Circle()
+                        .foregroundColor(.orange)
+                }
             }
-            .scaledToFit()
+            .padding()
         }
-        .padding()
     }
 }
 
